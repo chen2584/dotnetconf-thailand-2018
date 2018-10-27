@@ -1,6 +1,6 @@
 using System.Runtime.CompilerServices;
 
-[module:NonNullTypes] // C# 8.0
+//[module:NonNullTypes] // C# 8.0
 namespace TestNotNullTypes
 {
     public class Person

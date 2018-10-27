@@ -1,12 +1,21 @@
-static ref readonly int RefDemo(this in int x, int y)
+class MyClass
 {
-     //x++;
-    return ref x;
+    static ref readonly int RefDemo(in int x, int y)
+    {
+        //x++;
+        return ref x;
+    }
+
+    public void Run()
+    {
+        var a = 100;
+        var b = 200;
+        ref readonly int c = ref RefDemo(a, b);
+        //c++;
+        WriteLine($"a = {a}, b = {b}, c = {c}");
+    }
+
 }
 
-var a = 100;
-var b = 200;
-var c = a.RefDemo(b);
-c++;
-
-WriteLine($"a = {a}, b = {b}, c = {c}");
+var myClass = new MyClass();
+myClass.Run();

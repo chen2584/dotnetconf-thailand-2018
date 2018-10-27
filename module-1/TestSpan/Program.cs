@@ -13,10 +13,10 @@ namespace TestSpan
             }
 
             ReadOnlySpan<int> span = a.AsSpan();
-            var slice = span.Slice(0, 3);
+            //var slice = span.Slice(0, 3);
             //slice[0] = 100; will error
 
-            foreach (var item in slice)
+            foreach (var item in span)
             {
                 Console.WriteLine(item);
             }

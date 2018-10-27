@@ -1,0 +1,1 @@
+# dotnetconf-thailand-2018

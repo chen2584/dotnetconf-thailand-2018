@@ -1,12 +1,12 @@
-ref int RefDemo(ref int x, int y)
+static ref readonly int RefDemo(this in int x, int y)
 {
-    //x++;
-    y--;
+     //x++;
     return ref x;
 }
 
-int a = 1, b = 10;
-readonly int c = RefDemo(ref a, b);
-//c += 100;
+var a = 100;
+var b = 200;
+var c = a.RefDemo(b);
+c++;
 
 WriteLine($"a = {a}, b = {b}, c = {c}");
